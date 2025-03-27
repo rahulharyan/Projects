@@ -1,0 +1,21 @@
+{% extends "main.html" %}
+{% block content %}
+<center>
+    <br>
+    <br>
+    <h2 class='history_heading'>History</h2>
+    <div class="history_main_buttons">
+        <a class="history_delete_all"href="{% url 'delete_all_history' %}">Delete All</a>
+        <a class="history_restore_all" href="{% url "restore_all_history" %}">Restore All</a>
+    </div>
+    {% for i in History %}
+    <div class="history_data">
+        <div class="history_data_a1">
+            <h3 class="history_a1">{{i.title}}</h3>
+            <h3 class="history_a2">{{i.desc}}</h3>
+        </div>
+    </div>
+    <a class="history_delete" href="{% url 'delete_history' i.id %}">Delete</a>
+    {% endfor %}
+</center>
+{% endblock content %}

@@ -1,0 +1,14 @@
+{% comment %} {% extends "main.html" %} {% endcomment %}
+{% block content %}
+<div class="nav_bar">
+    <div class="logo">
+        <h2>ToDo</h2>
+    </div>
+    <div class="links">
+        <a class= "link_a" href="{% url "home" %}">Home</a>
+        <a class= "link_b" href="{% url "add" %}">Add Task</a>
+        <a class= "link_c" href="{% url "history" %}">History</a>
+        <a class= "link_d" href="{% url "about" %}">About</a>
+    </div>
+</div>
+{% endblock content %}

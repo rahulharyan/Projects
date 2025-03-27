@@ -1,0 +1,22 @@
+{% extends "main.html" %}
+{% block content %}
+<center>
+    <h2 class='edit_heading'>Edit the ToDo</h2>
+    <div class="edit_info">
+        <form class='edit_form' action="" method="POST">
+            {% csrf_token %}
+            <div class="edit_title">
+                <label for="">Title</label>
+            <input type="text" name="title" value="{{data.title}}" id='edit'>
+            </div>
+
+            <div class="edit_desc">
+                <label for="">Desc</label>
+            <input type="text" name="desc" value="{{data.desc}}" id='desc_edit'>
+            </div>
+
+            <button id='edit_button'value="save">Save</button>
+        </form>
+    </div>
+</center>
+{% endblock content %}

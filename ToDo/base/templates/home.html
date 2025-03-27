@@ -1,0 +1,23 @@
+{% extends "main.html" %}
+{% block content %}
+<center>
+    <br>
+    <br>
+    <h2 class="home_heading">All Tasks</h2>
+    <br>
+    {% for i in data%}
+    <div class="home_data">
+        <div class="home_data_a1">
+            <h2 class="a1">{{i.title}}</h2>
+            <h2 class="a2">{{i.desc}}</h2>
+        </div>
+    </div>
+    <div class="home_buttons">
+        <a class="home_button_a1" href="{% url "details" i.id %}">Details</a>
+        <a class="home_button_a2" href="{% url "edit" i.id %}">Edit</a>
+        <a class="home_button_a3" href="{% url "delete" i.id %}">Delete</a>
+    </div>
+    {% endfor %}
+    
+</center>
+{% endblock content %}

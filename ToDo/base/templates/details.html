@@ -1,0 +1,15 @@
+{% extends "main.html" %}
+{% block content %}
+<center>
+    <div class="details_data">
+        {% for i in data %}
+        <div class="home_data_a1">
+            <h2 class="a1">{{i.title}}</h2>
+            <h2 class="a2">{{i.desc}}</h2>
+        </div>
+    </div>
+    {% endfor %}
+    <a class='details_gotit' href="{% url "home" %}">Got it</a>
+    
+</center>
+{% endblock content %}
